@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fire_guardian/global_core/color/color.dart' as c;
 import 'package:fire_guardian/core.dart';
 import '../controller/maps_controller.dart';
 
@@ -10,14 +11,23 @@ class MapsView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Maps"),
+        automaticallyImplyLeading: false,
+        title: Text(
+          "Maps",
+          style: TextStyle(
+            fontSize: 18,
+            color: c.primary,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
         actions: const [],
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: [],
           ),
         ),
       ),

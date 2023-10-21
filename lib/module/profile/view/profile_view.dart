@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fire_guardian/global_core/color/color.dart' as c;
 import 'package:fire_guardian/core.dart';
-import '../controller/profile_controller.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({Key? key}) : super(key: key);
@@ -26,7 +25,7 @@ class ProfileView extends StatefulWidget {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
+          child: const Column(
             children: [
               Center(
                 child: Column(

@@ -39,6 +39,8 @@ dependencies:
   cloud_firestore: ^4.10.0
   bottom_navy_bar: ^6.0.0
   carousel_slider: ^4.2.1
+  flutter_map: ^6.0.0
+  latlng: ^1.0.0
 
 dev_dependencies:
   flutter_test:

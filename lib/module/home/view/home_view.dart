@@ -12,6 +12,7 @@ class HomeView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text(
           "Home",
           style: TextStyle(
