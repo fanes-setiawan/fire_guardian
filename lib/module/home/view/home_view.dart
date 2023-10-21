@@ -15,11 +15,12 @@ class HomeView extends StatefulWidget {
         title: Text(
           "Home",
           style: TextStyle(
-            fontSize: 17,
+            fontSize: 18,
             color: c.primary,
             fontWeight: FontWeight.bold,
           ),
         ),
+        centerTitle: true,
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -176,7 +177,7 @@ class HomeView extends StatefulWidget {
                                 ),
                                 onPressed: () {},
                                 child: Text(
-                                  "Tangani",
+                                  "GO",
                                   style: TextStyle(
                                     fontSize: 14.0,
                                     color: c.white,

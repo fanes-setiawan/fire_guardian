@@ -66,10 +66,8 @@ class LoginView extends StatefulWidget {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomeView()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyHomePage()));
                 },
                 child: Text(
                   "LOGIN",
