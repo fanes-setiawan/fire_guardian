@@ -63,7 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '970688242747',
     projectId: 'db-fire-guardian',
     storageBucket: 'db-fire-guardian.appspot.com',
-    iosClientId: '970688242747-7hf9d5v77qcbbaktov93omns72hm2e5b.apps.googleusercontent.com',
+    iosClientId:
+        '970688242747-7hf9d5v77qcbbaktov93omns72hm2e5b.apps.googleusercontent.com',
     iosBundleId: 'com.example.fireGuardian',
   );
 }
