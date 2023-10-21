@@ -1,5 +1,6 @@
 import 'package:fire_guardian/firebase_options.dart';
 import 'package:fire_guardian/module/login/view/login_view.dart';
+import 'package:fire_guardian/tabBar.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginView(),
+      home: MyHomePage(),
     );
   }
 }

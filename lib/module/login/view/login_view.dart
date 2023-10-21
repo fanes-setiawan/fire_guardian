@@ -1,8 +1,6 @@
 import 'package:fire_guardian/global_core/color/color.dart' as c;
-import 'package:fire_guardian/global_widget/form_widget/text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fire_guardian/core.dart';
-import '../controller/login_controller.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -67,9 +65,14 @@ class LoginView extends StatefulWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomeView()));
+                },
                 child: Text(
-                  "MASUK",
+                  "LOGIN",
                   style: TextStyle(
                       color: c.whiteText, fontWeight: FontWeight.bold),
                 ),

@@ -85,7 +85,7 @@ class RegisterView extends StatefulWidget {
                 ),
                 onPressed: () {},
                 child: Text(
-                  "MASUK",
+                  "REGISTER",
                   style: TextStyle(
                       color: c.whiteText, fontWeight: FontWeight.bold),
                 ),

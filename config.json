@@ -1,7 +1,11 @@
 {
     "modules": [
         "login",
-        "register"
+        "register",
+        "home",
+        "maps",
+        "history",
+        "profile"
     ],
     "module_directory_name": "module",
     "experimental_mode": false,
