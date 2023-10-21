@@ -7,7 +7,7 @@ class LoginController extends State<LoginView> {
   static late LoginController instance;
   late LoginView view;
   bool obscureState = true;
-  bool isLoading = false; // Status loading
+  bool isLoading = false;
 
   visibilitySt() {
     obscureState = !obscureState;

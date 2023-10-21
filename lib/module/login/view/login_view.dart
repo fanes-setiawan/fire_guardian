@@ -88,7 +88,13 @@ class LoginView extends StatefulWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const RegisterView()),
+                      );
+                    },
                     child: Text(
                       "Register",
                       style: TextStyle(

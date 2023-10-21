@@ -6,6 +6,14 @@ class RegisterController extends State<RegisterView> {
   static late RegisterController instance;
   late RegisterView view;
 
+  bool obscureState = true;
+  bool isLoading = false;
+
+  visibilitySt() {
+    obscureState = !obscureState;
+    setState(() {});
+  }
+
   @override
   void initState() {
     instance = this;
@@ -17,4 +25,8 @@ class RegisterController extends State<RegisterView> {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+  String? name;
+  String? address;
+  String? email;
+  String? password;
 }
