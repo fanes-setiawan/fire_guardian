@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
               textAlign: TextAlign.center,
             ),
             BottomNavyBarItem(
-              icon: const Icon(Icons.map_outlined),
+              icon: const Icon(Icons.location_pin),
               title: const Text('Location'),
               activeColor: c.primary,
               textAlign: TextAlign.center,
