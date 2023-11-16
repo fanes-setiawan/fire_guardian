@@ -174,14 +174,14 @@ class HomeView extends StatefulWidget {
                               trailing: TextButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStatePropertyAll(c.red),
+                                      MaterialStatePropertyAll(c.white),
                                 ),
                                 onPressed: () {},
                                 child: Text(
                                   "GO",
                                   style: TextStyle(
                                     fontSize: 14.0,
-                                    color: c.white,
+                                    color: c.primary,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),

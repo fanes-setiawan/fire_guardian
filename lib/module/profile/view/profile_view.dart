@@ -25,12 +25,12 @@ class ProfileView extends StatefulWidget {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
-          child: const Column(
+          child: Column(
             children: [
               Center(
                 child: Column(
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       radius: 40,
                       backgroundImage: NetworkImage(
                         "https://upload.wikimedia.org/wikipedia/commons/6/6b/Feuerwehreinsatz-gan1.jpg",
@@ -74,6 +74,25 @@ class ProfileView extends StatefulWidget {
                       title: Text("Settings"),
                       trailing: Icon(
                         Icons.chevron_right,
+                        size: 24.0,
+                      ),
+                    ),
+                    ListTile(
+                      onTap: () async {
+                        controller.doLogout();
+                      },
+                      leading: Icon(
+                        Icons.logout,
+                        color: c.red,
+                      ),
+                      minLeadingWidth: 0.0,
+                      title: Text(
+                        "Logout",
+                        style: TextStyle(color: c.red),
+                      ),
+                      trailing: Icon(
+                        Icons.chevron_right,
+                        color: c.red,
                         size: 24.0,
                       ),
                     ),

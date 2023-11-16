@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fire_guardian/core.dart';
-import '../view/login_view.dart';
+import 'package:fire_guardian/global_core/color/color.dart' as c;
 
 class LoginController extends State<LoginView> {
   static late LoginController instance;
@@ -27,26 +27,60 @@ class LoginController extends State<LoginView> {
   Widget build(BuildContext context) => widget.build(context, this);
   String? email;
   String? password;
-  Future<void> doEmailLogin() async {
+  doEmailLogin() async {
     try {
       setState(() {
-        isLoading = true; // Set status loading menjadi true sebelum login
+        isLoading = true;
       });
 
       await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email!,
         password: password!,
       );
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => MyHomePage()));
     } on FirebaseAuthException catch (err) {
       print("Login error: ${err.code} - ${err.message}");
-      // TODO: Handle login error, show error message to the user
+      await showDialog<void>(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: const Text('Info'),
+            content: const SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text('Masukan email dan password dengan benar'),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: c.white,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginView(),
+                    ),
+                  );
+                },
+                child: Text(
+                  "yes",
+                  style: TextStyle(color: c.black, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          );
+        },
+      );
     } catch (err) {
       print("Login error: $err");
-      // TODO: Handle login error, show error message to the user
     } finally {
       setState(() {
-        isLoading =
-            false; // Set status loading menjadi false setelah login selesai
+        isLoading = false;
       });
     }
   }

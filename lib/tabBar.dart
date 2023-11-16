@@ -12,10 +12,10 @@ class _MyHomePageState extends State<MyHomePage> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    HomeView(),
-    MapsView(),
-    HistoryView(),
-    ProfileView(),
+    const HomeView(),
+    const MapsView(),
+    const HistoryView(),
+    const ProfileView(),
   ];
 
   @override
