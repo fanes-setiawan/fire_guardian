@@ -1,7 +1,7 @@
 import 'package:fire_guardian/core.dart';
 import 'package:fire_guardian/firebase_options.dart';
 import 'package:fire_guardian/global_core/api/firebase_api.dart';
-import 'package:fire_guardian/module/login/view/login_view.dart';
+import 'package:fire_guardian/module/auth/login/view/login_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+navigatorKey: Get.navigatorKey,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

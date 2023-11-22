@@ -54,6 +54,7 @@ class LoginView extends StatefulWidget {
                               ? Icons.visibility
                               : Icons.visibility_off,
                           color: Colors.grey,
+                          size: 22,
                         ),
                       ),
                       onPressed: (value) {

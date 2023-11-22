@@ -57,7 +57,7 @@ class RegisterController extends State<RegisterView> {
           print(err);
         }
       }
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => MyHomePage(),
